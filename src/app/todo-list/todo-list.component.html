@@ -1,0 +1,10 @@
+<div class="card">
+  <h4>Todo</h4>
+  <div *ngIf="todoList.length != 0">
+    <todo-list-item *ngFor="let item of todoList" [todo]="item" (onRemove)="removeItem($event)" (onChange)="toggleItem($event)"></todo-list-item>
+  </div>
+  <form class="row">
+    <input #listCtrl type="text" name="itemName" placeholder="Item name" required>
+    <button (click)="addItem(listCtrl.value)">Add item</button>
+  </form>
+</div>

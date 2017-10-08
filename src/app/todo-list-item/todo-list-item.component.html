@@ -1,0 +1,5 @@
+<div class="row">
+  <input type="checkbox" [checked]="todo.done" (change)="toggleItem()">
+  <span>{{todo.name}}</span>
+  <button (click)="removeItem()">X</button>
+</div>
