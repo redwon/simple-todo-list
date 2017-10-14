@@ -8,6 +8,7 @@ import { TodoStorageService } from '../service/todo-storage.service';
 })
 export class TodoListComponent implements OnInit {
   todoList = [];
+  taskName: string;
 
   constructor(public storage: TodoStorageService) { }
 
@@ -23,9 +24,9 @@ export class TodoListComponent implements OnInit {
     this.storage.set(this.todoList);
   }
 
-  addItem(itemName) {
+  addTask() {
     let item = {
-      name: itemName,
+      name: this.taskName,
       done: false
     }
     this.todoList.push(item);

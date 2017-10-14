@@ -1,3 +1,13 @@
-.page-header {
-  position: relative;
+.app-header {
+  background-color: #2196f3;
+  color: #fff;
+  text-align: center;
+  padding: 20px 10px;
+  box-shadow: 1px 2px 6px #999;
+
+  &__title {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 20px;
+  }
 }
