@@ -1,0 +1,20 @@
+.todo-item {
+  border: 1px solid #dedede;
+  padding: 5px;
+  margin-bottom: 15px;
+
+  &__name {
+    padding: 0 10px;
+  }
+
+  &__btn {
+    margin-left: auto;
+  }
+
+  &.done {
+    .todo-item__name {
+      color: #999;
+      text-decoration: line-through;
+    }
+  }
+}

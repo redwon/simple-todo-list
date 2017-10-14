@@ -1,5 +1,5 @@
-<div class="row">
+<div class="row todo-item" [class.done]="todo.done">
   <input type="checkbox" [checked]="todo.done" (change)="toggleItem()">
-  <span>{{todo.name}}</span>
-  <button (click)="removeItem()">X</button>
+  <span class="todo-item__name">{{todo.name}}</span>
+  <button class="todo-item__btn" (click)="removeItem()">X</button>
 </div>
