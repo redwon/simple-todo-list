@@ -1,13 +1,4 @@
-// Все элементы формы
-
-input[type='text'],
-input[type='email'],
-input[type='tel'],
-input[type='url'],
-input[type='search'],
-input[type='password'],
-textarea,
-select {
+input[type='text'] {
   font-family: inherit;
   width: 100%;
   max-width: 100%;
@@ -17,8 +8,6 @@ select {
   padding: 10px 15px;
   color: #333;
   background-color: #fff;
-  margin-top: 10px;
-  margin-bottom: 10px;
 
   &:focus {
     border-color: darken(#dedede, 15%);

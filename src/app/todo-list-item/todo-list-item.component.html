@@ -1,5 +1,12 @@
-<div class="row todo-item" [class.done]="todo.done">
-  <input type="checkbox" [checked]="todo.done" (change)="toggleItem()">
-  <span class="todo-item__name">{{todo.name}}</span>
-  <button class="todo-item__btn" (click)="removeItem()">X</button>
+<div class="row todo-item">
+  <div class="todo-item__check" (click)="toggleItem()" [ngClass]="{ 'todo-item__check--done': todo.done }">
+    <i class="fa fa-fw fa-square-o" *ngIf="!todo.done"></i>
+    <i class="fa fa-fw fa-check-square-o" *ngIf="todo.done"></i>
+  </div>
+  <span class="todo-item__name" [ngClass]="{ 'todo-item__name--done': todo.done }">
+    {{todo.name}}
+  </span>
+  <span class="todo-item__btn" (click)="removeItem()">
+    <i class="fa fa-trash"></i>
+  </span>
 </div>
