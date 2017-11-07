@@ -3,7 +3,7 @@
   <div *ngIf="todoList.length != 0">
     <todo-list-item *ngFor="let item of todoList" [todo]="item" (onRemove)="removeItem($event)" (onChange)="toggleItem($event)"></todo-list-item>
   </div>
-  <form class="row" #taskForm="ngForm">
+  <form class="row task-form" #taskForm="ngForm">
     <input type="text" [(ngModel)]="taskName" name="task" placeholder="Task name" required>
     <button class="btn no-shrink" (click)="addTask(); taskForm.reset()" [disabled]="!taskForm.valid">Add task</button>
   </form>
