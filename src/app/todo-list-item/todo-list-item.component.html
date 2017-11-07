@@ -3,7 +3,7 @@
     <i class="fa fa-fw fa-square-o" *ngIf="!todo.done"></i>
     <i class="fa fa-fw fa-check-square-o" *ngIf="todo.done"></i>
   </div>
-  <input class="todo-item__name" [disabled]="todo.done" [ngClass]="{ 'todo-item__name--done': todo.done }" [value]="todo.name">
+  <input #taskInput class="todo-item__name" [ngClass]="{ 'todo-item__name--done': todo.done }" [disabled]="todo.done" [value]="todo.name" (keyup)="updateItem(taskInput.value)">
   <span class="todo-item__btn" (click)="removeItem()">
     <i class="fa fa-trash"></i>
   </span>

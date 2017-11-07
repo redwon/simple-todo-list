@@ -25,4 +25,9 @@ export class TodoListItemComponent implements OnInit {
     this.todo.done = !this.todo.done;
     this.onChange.emit(this.todo);
   }
+
+  updateItem(taskName) {
+    this.todo.name = taskName;
+    this.onChange.emit(this.todo);
+  }
 }

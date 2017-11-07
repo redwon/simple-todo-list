@@ -39,8 +39,7 @@ export class TodoListComponent implements OnInit {
     this.saveItems();
   }
 
-  toggleItem(item) {
-    console.log(item);
+  updateItem() {
     this.saveItems();
   }
 
