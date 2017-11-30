@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SortablejsOptions } from 'angular-sortablejs';
 import { TodoStorageService } from '../service/todo-storage.service';
 
 @Component({
@@ -9,8 +10,17 @@ import { TodoStorageService } from '../service/todo-storage.service';
 export class TodoListComponent implements OnInit {
   todoList = [];
   taskName: string;
+  options: SortablejsOptions;
 
-  constructor(public storage: TodoStorageService) { }
+  constructor(public storage: TodoStorageService) {
+    this.options = {
+      animation: 300,
+      handle: '.todo-item__drag',
+      onUpdate: (event: any) => {
+        this.saveItems();
+      }
+    };
+  }
 
   ngOnInit() {
     this.getItems();

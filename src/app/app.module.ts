@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule }   from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { SortablejsModule } from 'angular-sortablejs';
 
 import { TodoStorageService } from './service/todo-storage.service';
 
@@ -17,6 +18,7 @@ import { TodoListItemComponent } from './todo-list-item/todo-list-item.component
   imports: [
     BrowserModule,
     FormsModule,
+    SortablejsModule
   ],
   providers: [
     TodoStorageService,

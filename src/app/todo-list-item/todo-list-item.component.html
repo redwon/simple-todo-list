@@ -1,4 +1,7 @@
 <div class="row todo-item">
+  <div class="todo-item__drag">
+    <i class="fa fa-sort"></i>
+  </div>
   <div class="todo-item__check" (click)="toggleItem()" [ngClass]="{ 'todo-item__check--done': todo.done }">
     <i class="fa fa-fw fa-square-o" *ngIf="!todo.done"></i>
     <i class="fa fa-fw fa-check-square-o" *ngIf="todo.done"></i>

@@ -1,6 +1,6 @@
 <div class="card">
   <p *ngIf="!todoList.length">Add items</p>
-  <div *ngIf="todoList.length != 0">
+  <div *ngIf="todoList.length != 0" [sortablejs]="todoList" [sortablejsOptions]="options">
     <todo-list-item *ngFor="let item of todoList" [todo]="item" (onRemove)="removeItem($event)" (onChange)="updateItem()"></todo-list-item>
   </div>
   <form class="row task-form" #taskForm="ngForm">

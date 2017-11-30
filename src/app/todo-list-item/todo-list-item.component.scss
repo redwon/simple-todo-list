@@ -1,4 +1,9 @@
+:host {
+  display: block;
+}
+
 .todo-item {
+  align-items: center;
   padding: 5px;
   margin-bottom: 10px;
 
@@ -32,5 +37,11 @@
     margin-left: auto;
     font-size: 17px;
     color: #f44336;
+  }
+
+  &__drag {
+    cursor: move;
+    touch-action: none;
+    margin-right: 10px;
   }
 }
